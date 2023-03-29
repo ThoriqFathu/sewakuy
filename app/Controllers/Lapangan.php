@@ -7,12 +7,12 @@ use App\Models\LapanganModel;
 class Lapangan extends BaseController
 {
     protected $lapanganModel;
-    protected $url;
+    // protected $url;
     protected $helpers = ['form'];
     public function __construct()
     {
         $this->lapanganModel = new LapanganModel;
-        $this->url = 'http://localhost/CI/public/';
+        // $this->url = 'http://localhost/CI/public/';
     }
 
     public function index()
@@ -119,7 +119,7 @@ class Lapangan extends BaseController
             // return redirect()->to($this->url . '/lapangan/tambah')->withInput()->with('validation', $validation);
 
             // session()->setFlashdata('error', $this->validator);
-            return redirect()->to($this->url . '/lapangan/tambah')->withInput()->with('errors', $this->validator->getErrors());
+            return redirect()->to(base_url() . '/lapangan/tambah')->withInput()->with('errors', $this->validator->getErrors());
         } else {
             // ambil gambar
             $filename = $this->request->getFile('gambar');
@@ -137,7 +137,7 @@ class Lapangan extends BaseController
 
             ]);
 
-            return redirect()->to($this->url . '/lapangan');
+            return redirect()->to(base_url() . '/lapangan');
         }
     }
 

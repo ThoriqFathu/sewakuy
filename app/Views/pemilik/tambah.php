@@ -24,7 +24,7 @@
                     <?php
                     $errors = session()->getFlashdata('errors');
                     ?>
-                    <form method="post" enctype="multipart/form-data" action="http://localhost/CI/public/lapangan/post">
+                    <form method="post" enctype="multipart/form-data" action=<?= base_url() . "lapangan/post"; ?>>
                         <!-- 2 column grid layout with text inputs for the first and last names -->
                         <h3>Tambah Lapangan</h3>
 
@@ -96,7 +96,7 @@
                         <button type="submit" name="submit" class="btn btn-primary btn-block mb-4">
                             Tambah
                         </button>
-                        <a href="http://localhost/CI/public/lapangan" class="btn btn-primary btn-block mb-4">Kembali</a>
+                        <a href=<?= base_url() . "lapangan"; ?> class="btn btn-primary btn-block mb-4">Kembali</a>
 
 
                     </form>

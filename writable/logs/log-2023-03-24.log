@@ -1,0 +1,236 @@
+CRITICAL - 2023-03-24 08:29:32 --> Invalid file: "kelola_lapangan.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kelola_lapangan.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('kelola_lapangan', [], true)
+ 3 APPPATH\Controllers\Lapangan.php(21): view('kelola_lapangan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 09:42:41 --> Undefined variable $judul
+in APPPATH\Views\pemilik\detil.php on line 20.
+ 1 APPPATH\Views\pemilik\detil.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'APPPATH\\Views\\pemilik\\detil.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pemilik\\detil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/detil', [], true)
+ 5 APPPATH\Controllers\Lapangan.php(28): view('pemilik/detil')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 09:43:48 --> Undefined variable $judul
+in APPPATH\Views\pemilik\detil.php on line 20.
+ 1 APPPATH\Views\pemilik\detil.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'APPPATH\\Views\\pemilik\\detil.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pemilik\\detil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/detil', [], true)
+ 5 APPPATH\Controllers\Lapangan.php(31): view('pemilik/detil')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 09:43:52 --> Undefined variable $judul
+in APPPATH\Views\pemilik\detil.php on line 20.
+ 1 APPPATH\Views\pemilik\detil.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'APPPATH\\Views\\pemilik\\detil.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pemilik\\detil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/detil', [], true)
+ 5 APPPATH\Controllers\Lapangan.php(31): view('pemilik/detil')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 09:44:15 --> Undefined variable $judul
+in APPPATH\Views\pemilik\detil.php on line 20.
+ 1 APPPATH\Views\pemilik\detil.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'APPPATH\\Views\\pemilik\\detil.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pemilik\\detil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/detil', [], true)
+ 5 APPPATH\Controllers\Lapangan.php(31): view('pemilik/detil')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 14:11:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `lapangan`' at line 2 in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT (SELECT ...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT (SELECT ...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT (SELECT ...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT (SELECT ...', Array, false)
+#4 C:\xampp\htdocs\CI\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Models\LapanganModel.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\CI\app\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+#9 C:\xampp\htdocs\CI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-24 14:11:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `lapangan`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT (SELECT * from lapangan
+FROM `lapangan`', [], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\LapanganModel.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 14:12:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `lapangan`' at line 2 in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT (SELECT ...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT (SELECT ...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT (SELECT ...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT (SELECT ...', Array, false)
+#4 C:\xampp\htdocs\CI\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Models\LapanganModel.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\CI\app\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+#9 C:\xampp\htdocs\CI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-24 14:12:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `lapangan`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT (SELECT * from lapangan
+FROM `lapangan`', [], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\LapanganModel.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 14:12:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `lapangan`' at line 2 in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT (SELECT ...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT (SELECT ...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT (SELECT ...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT (SELECT ...', Array, false)
+#4 C:\xampp\htdocs\CI\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Models\LapanganModel.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\CI\app\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+#9 C:\xampp\htdocs\CI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-24 14:12:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `lapangan`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT (SELECT * from lapangan
+FROM `lapangan`', [], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\LapanganModel.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 14:19:21 --> Too few arguments to function App\Models\LapanganModel::getData(), 0 passed in C:\xampp\htdocs\CI\app\Controllers\Lapangan.php on line 18 and exactly 1 expected
+in APPPATH\Models\LapanganModel.php on line 12.
+ 1 APPPATH\Controllers\Lapangan.php(18): App\Models\LapanganModel->getData()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 14:20:04 --> Cannot use object of type mysqli as array
+in APPPATH\Views\pemilik\kelola_lapangan.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/kelola_lapangan', [], true)
+ 4 APPPATH\Controllers\Lapangan.php(24): view('pemilik/kelola_lapangan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 14:21:15 --> Trying to access array offset on value of type null
+in APPPATH\Views\pemilik\kelola_lapangan.php on line 46.
+ 1 APPPATH\Views\pemilik\kelola_lapangan.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pemilik\\kelola_lapangan.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pemilik\\kelola_lapangan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/kelola_lapangan', [], true)
+ 5 APPPATH\Controllers\Lapangan.php(24): view('pemilik/kelola_lapangan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 14:40:50 --> Undefined variable $lapangan
+in APPPATH\Views\pemilik\kelola_transaksi.php on line 43.
+ 1 APPPATH\Views\pemilik\kelola_transaksi.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lapangan', 'APPPATH\\Views\\pemilik\\kelola_transaksi.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pemilik\\kelola_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pemilik/kelola_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(25): view('pemilik/kelola_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 14:44:35 --> Call to undefined method App\Models\LapanganModel::getResultArray
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\LapanganModel.php(16): CodeIgniter\Model->__call('getResultArray', [])
+ 2 APPPATH\Controllers\Lapangan.php(19): App\Models\LapanganModel->getData('daffakuy')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Lapangan->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lapangan))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 14:50:45 --> mysqli_sql_exception: Not unique table/alias: 'booking' in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CI\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Models\TransaksiModel.php(20): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\CI\app\Controllers\Transaksi.php(19): App\Models\TransaksiModel->getData('daffakuy')
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(934): App\Controllers\Transaksi->index()
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+#9 C:\xampp\htdocs\CI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-24 14:50:45 --> Not unique table/alias: 'booking'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `booking`
+JOIN `booking` ON `booking`.`id_lapangan`=`lapangan`.`id_lapangan`
+WHERE `username` = :username:', [...], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\TransaksiModel.php(20): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Transaksi.php(19): App\Models\TransaksiModel->getData('daffakuy')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaksi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 14:51:46 --> mysqli_sql_exception: Not unique table/alias: 'booking' in C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\CI\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CI\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CI\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CI\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CI\app\Models\TransaksiModel.php(20): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\CI\app\Controllers\Transaksi.php(19): App\Models\TransaksiModel->getData('daffakuy')
+#7 C:\xampp\htdocs\CI\system\CodeIgniter.php(934): App\Controllers\Transaksi->index()
+#8 C:\xampp\htdocs\CI\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+#9 C:\xampp\htdocs\CI\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-24 14:51:46 --> Not unique table/alias: 'booking'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `booking`
+JOIN `booking` ON `booking`.`id_lapangan`=`lapangan`.`id_lapangan`', [], false)
+ 2 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\TransaksiModel.php(20): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Transaksi.php(19): App\Models\TransaksiModel->getData('daffakuy')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaksi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 14:53:23 --> Call to undefined method App\Models\TransaksiModel::getResultArray
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\TransaksiModel.php(21): CodeIgniter\Model->__call('getResultArray', [])
+ 2 APPPATH\Controllers\Transaksi.php(19): App\Models\TransaksiModel->getData('daffakuy')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaksi->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

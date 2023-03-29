@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary me-md-2" type="button" href="/CI/public/lapangan/tambah">Tambah Lapangan</a>
+            <a class="btn btn-primary me-md-2" type="button" href=<?= base_url() . "lapangan/tambah"; ?>>Tambah Lapangan</a>
         </div>
         <br>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -45,12 +45,12 @@
                         <td><?= $i++ ?></td>
                         <td><?= $row['nama'] ?></td>
                         <td><?= $row['alamat'] ?></td>
-                        <td><img src="http://localhost/CI/public/img/<?= $row['gambar'] ?>" alt="<?= $row['gambar'] ?>" width="200"></td>
+                        <td><img src="<?= base_url() . 'img/'; ?><?= $row['gambar'] ?>" alt="<?= $row['gambar'] ?>" width="200"></td>
                         <td><?= $row['harga'] ?></td>
                         <td><?= $row['jenis'] ?></td>
                         <td><?= $row['status'] ?></td>
-                        <td><a href="/CI/public/lapangan/detail/<?= $row['id_lapangan'] ?>" class="btn btn-success">Edit</a></td>
-                        <td><a href="/CI/public/lapangan/detail/<?= $row['id_lapangan'] ?>" class="btn btn-danger">Hapus</a></td>
+                        <td><a href="<?= base_url() . 'lapangan/detail/'; ?><?= $row['id_lapangan'] ?>" class="btn btn-success">Edit</a></td>
+                        <td><a href="<?= base_url() . 'lapangan/detail/'; ?><?= $row['id_lapangan'] ?>" class="btn btn-danger">Hapus</a></td>
                     </tr>
 
                 <?php } ?>

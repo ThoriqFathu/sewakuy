@@ -77,9 +77,9 @@
                         <br>
                         <!-- Status -->
                         <label class="form-label">Status</label>
-                        <select class="form-select" name="status" aria-label="Default select example">
-                            <option value="tersedia">Tersedia</option>
-                            <option value="tidak trsedia">Tidak Tersedia</option>
+                        <select class="form-select" name="status">
+                            <option selected value="tersedia">Tersedia</option>
+                            <option value="tidak tersedia">Tidak Tersedia</option>
                         </select>
                         <br>
                         <!-- gambar -->

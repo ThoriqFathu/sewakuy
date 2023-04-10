@@ -50,8 +50,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href=<?php echo base_url("/") ?>>Beranda</a></li>
-          <li><a href=<?php echo base_url() . '/lapangan/' ?>>Lapangan</a></li>
+          <li><a href=<?php echo base_url() . "/admin/" ?>>Beranda</a></li>
+          <li><a href=<?php echo base_url() . '/admin/' ?>>Menu</a></li>
           <li><a href=<?php echo base_url() . "/transaksi/" ?>>Transaksi</a></li>
           <li><a href="status.php">Status</a></li>
           <li><a href="laporan.php">Laporan</a></li>

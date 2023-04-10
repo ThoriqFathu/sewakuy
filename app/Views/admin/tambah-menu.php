@@ -19,10 +19,11 @@
         <div class="col-lg-8 mb-5 mb-lg-0">
             <div class="card">
                 <div class="card-body">
-
-
                     <?php
+                    // $errors = validation_errors();
                     $errors = session()->getFlashdata('errors');
+                    // $validasi = \Config\Services::validation();
+                    // d($validasi->hasError('nama_menu'));
                     ?>
                     <?= form_open(base_url() . "admin/postMenu") ?>
                     <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -55,7 +56,7 @@
                     <button type="submit" name="submit" class="btn btn-primary btn-block mb-4">
                         Tambah
                     </button>
-                    <a href=<?= base_url() . "lapangan"; ?> class="btn btn-primary btn-block mb-4">Kembali</a>
+                    <a href=<?= base_url() . "admin"; ?> class="btn btn-primary btn-block mb-4">Kembali</a>
 
 
                     <?= form_close() ?>

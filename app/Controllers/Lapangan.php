@@ -31,11 +31,6 @@ class Lapangan extends BaseController
     public function tambah()
     {
         session();
-        // if (!empty(session()->getFlashdata('error'))) {
-        //     $validation = session()->getFlashdata('error');
-        // } else {
-        //     $validation = null;
-        // }
 
         // $data = [
         //     'validation' => $validation
@@ -108,23 +103,18 @@ class Lapangan extends BaseController
 
         ])) {
 
-            //render view with error validation message
-            // dd($this->validator);
-            // return view('pemilik/tambah', [
-            //     'validation' => $this->validator
-            // ]);
-
-            // dd(['validation' => $this->validator]);
-            // $validation = \Config\Services::validation();
-            // return redirect()->to($this->url . '/lapangan/tambah')->withInput()->with('validation', $validation);
 
             // session()->setFlashdata('error', $this->validator);
             return redirect()->to(base_url() . '/lapangan/tambah')->withInput()->with('errors', $this->validator->getErrors());
         } else {
             // ambil gambar
             $filename = $this->request->getFile('gambar');
-            $nameGambar = $filename->getRandomName();
-            $filename->move('img', $nameGambar);
+            if ($filename->getError() == 4) {
+                $nameGambar = 'default.jpg';
+            } else {
+                $nameGambar = $filename->getRandomName();
+                $filename->move('img', $nameGambar);
+            }
 
             $this->lapanganModel->insert([
                 'nama' => $nama,
@@ -142,11 +132,51 @@ class Lapangan extends BaseController
     }
 
 
-    // public function detail()
-    // {
-    //     $data = [
-    //         'judul' => 'Detail Lapangan',
-    //     ];
-    //     return view('pemilik/detil', $data);
-    // }
+    public function edit($id)
+    {
+        // $model = new MenuModel();
+
+        $data['row'] = $this->lapanganModel->getId($id);
+
+        return view('pemilik/edit', $data);
+    }
+    public function update()
+    {
+        $username = 'daffakuy';
+        $nama = $this->request->getVar('nama');
+        $alamat = $this->request->getVar('alamat');
+        $harga = $this->request->getVar('harga');
+        $jenis = $this->request->getVar('jenis');
+        $status = $this->request->getVar('status');
+        $nameGambar = $this->request->getVar('gambar_awal');
+        $filename = $this->request->getFile('gambar');
+        if ($filename->getError() == 4) {
+            $nameGambar = $nameGambar;
+        } else {
+            if ($nameGambar == 'default.jpg') {
+                $nameGambar = $filename->getRandomName();
+                $filename->move('img', $nameGambar);
+            } else {
+                unlink('img/' . $nameGambar);
+                $nameGambar = $filename->getRandomName();
+                $filename->move('img', $nameGambar);
+            }
+        }
+
+
+        $id = $this->request->getVar('id');
+        $data = [
+            'nama' => $nama,
+            'username' => $username,
+            'alamat' => $alamat,
+            'gambar' => $nameGambar,
+            'harga' => $harga,
+            'jenis' => $jenis,
+            'status' => $status
+        ];
+
+        $this->lapanganModel->update($id, $data);
+
+        return redirect()->to(base_url() . '/lapangan');
+    }
 }

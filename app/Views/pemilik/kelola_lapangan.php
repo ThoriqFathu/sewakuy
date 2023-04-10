@@ -49,7 +49,7 @@
                         <td><?= $row['harga'] ?></td>
                         <td><?= $row['jenis'] ?></td>
                         <td><?= $row['status'] ?></td>
-                        <td><a href="<?= base_url() . 'lapangan/detail/'; ?><?= $row['id_lapangan'] ?>" class="btn btn-success">Edit</a></td>
+                        <td><a href="<?= base_url() . 'lapangan/edit/'; ?><?= $row['id_lapangan'] ?>" class="btn btn-success">Edit</a></td>
                         <td><a href="<?= base_url() . 'lapangan/detail/'; ?><?= $row['id_lapangan'] ?>" class="btn btn-danger">Hapus</a></td>
                     </tr>
 

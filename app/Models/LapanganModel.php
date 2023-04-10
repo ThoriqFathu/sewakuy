@@ -18,4 +18,8 @@ class LapanganModel extends Model
         // dd($builder);
         return $query->getResultArray();
     }
+    public function getId($id)
+    {
+        return $this->find($id);
+    }
 }

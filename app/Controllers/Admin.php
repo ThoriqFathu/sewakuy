@@ -32,4 +32,46 @@ class Admin extends BaseController
         session();
         return view('admin/tambah-menu');
     }
+    public function postMenu()
+    {
+        $username = 'daffakuy';
+        $nama_menu = $this->request->getVar('nama_menu');
+        $nama_controller = $this->request->getVar('nama_controller');
+
+        if (!$this->validate([
+            'nama_menu' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Nama Menu Harus Di isi.'
+                ]
+            ],
+            'nama_controller'    => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Nama Controller Harus Di isi.'
+                ]
+            ],
+
+        ])) {
+
+
+            // session()->setFlashdata('error', $this->validator);
+            return redirect()->to(base_url() . '/admin/tambahMenu')->withInput()->with('errors', $this->validator->getErrors());
+        } else {
+
+            echo "berhasil";
+            // $this->lapanganModel->insert([
+            //     'nama' => $nama,
+            //     'username' => $username,
+            //     'alamat' => $alamat,
+            //     'gambar' => $nameGambar,
+            //     'harga' => $harga,
+            //     'jenis' => $jenis,
+            //     'status' => $status
+
+            // ]);
+
+            // return redirect()->to(base_url() . '/lapangan');
+        }
+    }
 }

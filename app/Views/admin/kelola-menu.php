@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary me-md-2" type="button" href=<?= base_url() . "admin/tambah-menu"; ?>>Tambah Menu</a>
+            <a class="btn btn-primary me-md-2" type="button" href=<?= base_url() . "admin/tambahMenu"; ?>>Tambah Menu</a>
         </div>
         <br>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -42,8 +42,8 @@
                         <td><?= $i++ ?></td>
                         <td><?= $row['nama_menu'] ?></td>
                         <td><?= $row['nama_controller'] ?></td>
-                        <td><a href="<?= base_url() . 'lapangan/edit/'; ?><?= $row['id_menu'] ?>" class="btn btn-success">Edit</a></td>
-                        <td><a href="<?= base_url() . 'lapangan/detail/'; ?><?= $row['id_menu'] ?>" class="btn btn-danger">Hapus</a></td>
+                        <td><a href="<?= base_url() . 'admin/editMenu/'; ?><?= $row['id_menu'] ?>" class="btn btn-success">Edit</a></td>
+                        <td><a href="<?= base_url() . 'admin/hapusMenu/'; ?><?= $row['id_menu'] ?>" class="btn btn-danger">Hapus</a></td>
                     </tr>
 
                 <?php } ?>

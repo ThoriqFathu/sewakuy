@@ -1,0 +1,28 @@
+CRITICAL - 2023-04-10 14:55:49 --> Class "App\Models\AdminModel" not found
+in APPPATH\Controllers\Admin.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-10 14:57:57 --> Undefined variable $lapangan
+in APPPATH\Views\admin\kelola_menu.php on line 42.
+ 1 APPPATH\Views\admin\kelola_menu.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lapangan', 'APPPATH\\Views\\admin\\kelola_menu.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\kelola_menu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/kelola_menu', [], true)
+ 5 APPPATH\Controllers\Admin.php(28): view('admin/kelola_menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-10 14:58:44 --> Undefined array key "id_lapangan"
+in APPPATH\Views\admin\kelola_menu.php on line 48.
+ 1 APPPATH\Views\admin\kelola_menu.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_lapangan"', 'APPPATH\\Views\\admin\\kelola_menu.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\kelola_menu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/kelola_menu', [], true)
+ 5 APPPATH\Controllers\Admin.php(28): view('admin/kelola_menu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

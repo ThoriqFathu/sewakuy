@@ -12,6 +12,7 @@ class Admin extends BaseController
     public function __construct()
     {
         $this->menuModel = new MenuModel;
+        helper('form');
         // $this->url = 'http://localhost/CI/public/';
     }
 
@@ -30,11 +31,13 @@ class Admin extends BaseController
     public function tambahMenu()
     {
         session();
+        // $data = [
+        //     'validasi' => \Config\Services::validation()
+        // ];
         return view('admin/tambah-menu');
     }
     public function postMenu()
     {
-        $username = 'daffakuy';
         $nama_menu = $this->request->getVar('nama_menu');
         $nama_controller = $this->request->getVar('nama_controller');
 
@@ -57,21 +60,17 @@ class Admin extends BaseController
 
             // session()->setFlashdata('error', $this->validator);
             return redirect()->to(base_url() . '/admin/tambahMenu')->withInput()->with('errors', $this->validator->getErrors());
+            // return redirect()->to(base_url() . '/admin/tambahMenu')->withInput();
         } else {
 
-            echo "berhasil";
-            // $this->lapanganModel->insert([
-            //     'nama' => $nama,
-            //     'username' => $username,
-            //     'alamat' => $alamat,
-            //     'gambar' => $nameGambar,
-            //     'harga' => $harga,
-            //     'jenis' => $jenis,
-            //     'status' => $status
+            // echo "berhasil";
+            $this->menuModel->insert([
+                'nama_menu' => $nama_menu,
+                'nama_controller' => $nama_controller,
 
-            // ]);
+            ]);
 
-            // return redirect()->to(base_url() . '/lapangan');
+            return redirect()->to(base_url() . '/admin');
         }
     }
 }

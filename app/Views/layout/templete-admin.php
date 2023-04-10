@@ -52,9 +52,9 @@
         <ul>
           <li><a href=<?php echo base_url() . "/admin/" ?>>Beranda</a></li>
           <li><a href=<?php echo base_url() . '/admin/' ?>>Menu</a></li>
-          <li><a href=<?php echo base_url() . "/transaksi/" ?>>Transaksi</a></li>
+          <!-- <li><a href=<?php echo base_url() . "/transaksi/" ?>>Transaksi</a></li>
           <li><a href="status.php">Status</a></li>
-          <li><a href="laporan.php">Laporan</a></li>
+          <li><a href="laporan.php">Laporan</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

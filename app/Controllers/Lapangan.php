@@ -142,6 +142,7 @@ class Lapangan extends BaseController
     }
     public function update()
     {
+        $id = $this->request->getVar('id');
         $username = 'daffakuy';
         $nama = $this->request->getVar('nama');
         $alamat = $this->request->getVar('alamat');
@@ -150,6 +151,40 @@ class Lapangan extends BaseController
         $status = $this->request->getVar('status');
         $nameGambar = $this->request->getVar('gambar_awal');
         $filename = $this->request->getFile('gambar');
+        if (!$this->validate([
+            'nama' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Nama Lapangan Harus Di isi.'
+                ]
+            ],
+            'alamat'    => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Alamat Harus Di isi.'
+                ]
+            ],
+            'harga'    => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Harga Harus Di isi.'
+                ]
+            ],
+            'gambar' => [
+                'rules'  => 'is_image[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    'is_image' => 'File Harus Berupa Gambar',
+                    'mime_in' => 'File Harus Berupa Gambar'
+                ]
+            ]
+
+        ])) {
+
+
+            // session()->setFlashdata('error', $this->validator);
+            return redirect()->to(base_url() . '/lapangan/edit/' . (string)($id))->withInput()->with('errors', $this->validator->getErrors());
+        } else {
+        }
         if ($filename->getError() == 4) {
             $nameGambar = $nameGambar;
         } else {
@@ -161,22 +196,21 @@ class Lapangan extends BaseController
                 $nameGambar = $filename->getRandomName();
                 $filename->move('img', $nameGambar);
             }
+
+            $id = $this->request->getVar('id');
+            $data = [
+                'nama' => $nama,
+                'username' => $username,
+                'alamat' => $alamat,
+                'gambar' => $nameGambar,
+                'harga' => $harga,
+                'jenis' => $jenis,
+                'status' => $status
+            ];
+
+            $this->lapanganModel->update($id, $data);
+
+            return redirect()->to(base_url() . '/lapangan');
         }
-
-
-        $id = $this->request->getVar('id');
-        $data = [
-            'nama' => $nama,
-            'username' => $username,
-            'alamat' => $alamat,
-            'gambar' => $nameGambar,
-            'harga' => $harga,
-            'jenis' => $jenis,
-            'status' => $status
-        ];
-
-        $this->lapanganModel->update($id, $data);
-
-        return redirect()->to(base_url() . '/lapangan');
     }
 }

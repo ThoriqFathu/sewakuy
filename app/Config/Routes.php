@@ -31,6 +31,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
 $routes->get('lapangan/edit/(:num)', 'Lapangan::edit/$1');
+$routes->get('admin/editmenu/(:num)', 'Admin::editMenu/$1');
+$routes->get('admin/hapusmenu/(:num)', 'Admin::hapusMenu/$1');
 // $routes->get('/lapangan/(:segment)', 'Lapangan::detail/$1');
 
 /*

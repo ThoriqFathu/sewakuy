@@ -31,21 +31,20 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="card">
                         <div class="card-body py-5 px-md-5">
-                            <form method="post">
-                                <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <<?= form_open(base_url() . "publik/post_login") ?> <!-- 2 column grid layout with text inputs for the first and last names -->
                                 <h3>Login</h3>
                                 <br>
 
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3">Username</label>
-                                    <input type="text" id="form3Example3" name="uname" class="form-control" required />
+                                    <input type="text" id="form3Example3" name="username" class="form-control" required />
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4">Password</label>
-                                    <input type="password" id="form3Example4" name="pw" class="form-control" required />
+                                    <input type="password" id="form3Example4" name="password" class="form-control" required />
                                 </div>
                                 <div>
                                     <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href=<?= base_url() . "publik/register"; ?> style="color: #393f81;">Register here</a></p>
@@ -61,7 +60,7 @@
                                     </div>
                                 </div>
 
-                            </form>
+                                <?= form_close() ?>
                         </div>
                     </div>
                 </div>

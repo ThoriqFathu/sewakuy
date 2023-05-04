@@ -15,7 +15,7 @@ class UserModel extends Model
         $builder = $this->table('user');
         $builder->where('username', $username);
         $builder->where('password', $password);
-        $query = $builder->get();
-        return $query->getResultArray();
+        // $query = $builder->get();
+        return $builder->countAllResults();
     }
 }

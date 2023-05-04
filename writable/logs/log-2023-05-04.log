@@ -42,3 +42,42 @@ in APPPATH\Views\register.php on line 166.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publik))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-04 06:17:03 --> Call to undefined function form_open()
+in APPPATH\Views\register.php on line 324.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('register', [], true)
+ 4 APPPATH\Controllers\Publik.php(14): view('register')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publik->register()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publik))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-04 06:19:55 --> Invalid file: "register_penyewa.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register_penyewa.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('register_penyewa', [], true)
+ 3 APPPATH\Controllers\Publik.php(23): view('register_penyewa')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publik->post_level()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publik))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-04 06:20:17 --> Invalid file: "register_pemilik.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('register_pemilik.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('register_pemilik', [], true)
+ 3 APPPATH\Controllers\Publik.php(25): view('register_pemilik')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publik->post_level()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publik))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-04 07:02:46 --> Undefined variable $nama
+in APPPATH\Views\register_penyewa.php on line 42.
+ 1 APPPATH\Views\register_penyewa.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'APPPATH\\Views\\register_penyewa.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\register_penyewa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('register_penyewa', [], true)
+ 5 APPPATH\Controllers\Publik.php(23): view('register_penyewa')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publik->post_level()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publik))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

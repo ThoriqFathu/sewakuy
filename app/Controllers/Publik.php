@@ -7,16 +7,24 @@ use App\Controllers\BaseController;
 
 class Publik extends BaseController
 {
+
+  
+    
+
     protected $UserModel;
     protected $helpers = ['form'];
     public function __construct()
     {
         $this->UserModel = new UserModel;
     }
+
     public function login()
     {
         return view('login');
     }
+
+
+
     public function post_login()
     {
         $username = $this->request->getVar('username');
@@ -28,8 +36,19 @@ class Publik extends BaseController
             dd("gagal");
         }
     }
+
     public function register()
     {
         return view('register');
+    }
+
+    public function post_level()
+    {
+        $aktor = $this->request->getVar('aktor');
+        if ($aktor == "1") {
+            return view('register_penyewa');
+        } elseif ($aktor == "2") {
+            return view('register_pemilik');
+        }
     }
 }

@@ -10,16 +10,12 @@ class UserModel extends Model
     protected $primaryKey = 'username';
     protected $allowedFields = ['email', 'nama', 'password', 'jenis_kelamin', 'nomor_telepon', 'id_level'];
 
-    public function getData($username)
+    public function login($username, $password)
     {
-        $builder = $this->table('lapangan');
+        $builder = $this->table('user');
         $builder->where('username', $username);
-        $query = $builder->get();
-        // dd($builder);
-        return $query->getResultArray();
-    }
-    public function getId($id)
-    {
-        return $this->find($id);
+        $builder->where('password', $password);
+        // $query = $builder->get();
+        return $builder->countAllResults();
     }
 }
